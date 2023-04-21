@@ -1,1 +1,1 @@
-# quizz-departement-fran-ais
+# quizz-departement-français
