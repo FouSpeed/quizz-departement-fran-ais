@@ -31,7 +31,7 @@ def choix_dept(dep:list, nbr_qst: int)->list:
         deps_pour_dict = []
         reponse_possible = ["a", "b", "c"]
         #mélanger reponse_possible
-        random.shuffle(reponse_possible)
+        reponse_possible = random_list(reponse_possible) #ou faire random.shuffle(reponse_possible)
         #la bonne réponse sera le premier élément de reponse_possible
         indice_dep_reponse = 0 
 
@@ -84,3 +84,25 @@ def est_le_meilleur_chrono(nbr_dep: int, chrono: float, liste_chrono: list) -> b
         if liste_chrono[i][1] == nbr_dep and liste_chrono[i][0] < chrono:
             return False
     return True
+
+
+def random_list(liste):
+    """
+    Paramètres :
+        liste (list) : La liste d'éléments à mélanger.
+
+    Variables :
+        liste_random (list) : La liste aléatoire à remplir avec les éléments de la liste donnée.
+        random_element (int) : L'élément aléatoire à ajouter à la liste aléatoire.
+
+    Renvoie :
+        list_random : list : La liste d'éléments mélangés aléatoirement.
+    """
+    liste_random = []
+    while len(liste_random) != len(liste):
+        random_element = liste[random.randint(0,len(liste))-1]
+        if random_element not in liste_random:
+            liste_random.append(random_element)
+    return liste_random
+
+print(random_list([1,2,3,4]))
