@@ -104,5 +104,3 @@ def random_list(liste):
         if random_element not in liste_random:
             liste_random.append(random_element)
     return liste_random
-
-print(random_list([1,2,3,4]))
