@@ -10,7 +10,11 @@ Ce programme nécessite d'avoir Python 3 installé sur votre ordinateur.
 
 ## Installation
 
-1. Cloner ce repository sur votre ordinateur en utilisant la commande suivante : `git clone https://github.com/FouSpeed/quizz-departement-fran-ais.git`
+1. Cloner ce repository sur votre ordinateur en utilisant la commande suivante :
+
+    ```sh
+    git clone https://github.com/FouSpeed/quizz-departement-fran-ais.git
+    ```
 
 
 2. Ouvrir le dossier `quizz-departement-fran-ais` avec un éditeur de code.
