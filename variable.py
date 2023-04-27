@@ -1,6 +1,6 @@
 import json
 DEPT_POUR_NORMALE = 10
-DEPT_POUR_CONTRE_LA_MONTRE= 1
+DEPT_POUR_CONTRE_LA_MONTRE= 10
 record_sans_erreur = 0
 with open('record.json', 'r') as f:
     record = json.load(f)

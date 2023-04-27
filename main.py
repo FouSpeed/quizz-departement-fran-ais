@@ -12,7 +12,7 @@ from fonction import *
 
 
 #programme principale
-mode_de_jeu = str(input("A quel mode voulez-vous jouer (n pour normale, m pour contre la montre, s pour sans erreur): "))
+mode_de_jeu = str(input("A quel mode voulez-vous jouer (n pour normale, m pour contre la montre, s pour sans erreur, r pour les records): "))
 
 point = 0
 if mode_de_jeu == "n":
@@ -55,7 +55,7 @@ elif mode_de_jeu == "m":
             print("votre chrono est un record")
             with open('record.json', 'w') as f:
                 json.dump(record, f)
-            print(record_temps_nbr_contre_la_montre)
+            
 elif mode_de_jeu == "s":
     dept_selec = choix_dept(departement, 95)
     print(f"Votre but est de répondre au plus grand nombre de questions possible\n record: {record_sans_erreur}")
@@ -78,5 +78,4 @@ elif mode_de_jeu == "s":
         with open('record.json', 'w') as f:
             json.dump(record, f)
 
-print(f"Voici les record:\npour contre la montre: {record['record_montre']}\npour le questionnaire sans fin: {record['record_sans_fin']}")
-
+affichage_record(record['record_montre'], record['record_sans_fin'])

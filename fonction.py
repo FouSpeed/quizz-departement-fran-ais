@@ -47,9 +47,6 @@ def choix_dept(dep:list, nbr_qst: int)->list:
         
         dep_dict = {
                 "dept": deps_pour_dict[indice_dep_reponse][0],
-                "a" : "",
-                "b": "",
-                "c": "", 
                 "bonne_reponse" : reponse_possible[indice_dep_reponse]
                 }
         
@@ -104,3 +101,39 @@ def random_list(liste):
         if random_element not in liste_random:
             liste_random.append(random_element)
     return liste_random
+
+def affichage_record(record_montre: list, record_sans_fin: int) -> None:
+    """
+    Affiche les records pour le questionnaire sans fin et le questionnaire contre la montre.
+
+    paramètres:
+        record_montre (list de list): Une liste contenant les enregistrements du questionnaire contre la montre.
+                              Chaque élément de la liste est une paire contenant le temps (en secondes)
+                              et le nombre de questions pour cet enregistrement.
+        record_sans_fin (int): Le record pour le questionnaire sans fin (temps en secondes).
+    variables:
+        i (int): Variable de boucle pour parcourir les enregistrements
+        nbr_question_dans_record (int): Nombre de questions dans l'enregistrement en cours
+    Returns:
+        None
+    """
+    print(f"Le record pour le questionnaire sans fin:\n{record_sans_fin}")
+    
+    
+    if len(record_montre) !=0:
+        print(f"\nLes records pour le questionnaire contre la montre:")
+        i = 0  
+        nbr_question_dans_record = 1 
+
+        while i <= len(record_montre) - 1:
+            for record in record_montre:
+                if record[1] == nbr_question_dans_record:
+                    print(f"{record[1]} questions en {record[0]}s")
+                    i += 1
+            nbr_question_dans_record += 1
+            print()
+    else:
+        print("\npas de record pour le questionnaire contre la montre")
+
+
+
