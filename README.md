@@ -30,6 +30,7 @@ Le programme vous demandera alors quel mode de jeu vous souhaitez utiliser :
 - `n` pour le mode normal : vous devrez répondre à un nombre de questions prédéfini pour obtenir un score.
 - `m` pour le mode contre la montre : vous devrez répondre à un maximum de questions dans un temps imparti.
 - `s` pour le mode sans erreur : vous devrez répondre à un maximum de questions sans faire d'erreur.
+- `r` pour connaître les différents records
 
 ## Fonctionnalités
 
