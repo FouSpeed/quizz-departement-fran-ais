@@ -28,7 +28,9 @@ Pour lancer le programme, exécuter le fichier `main.py` avec Python.
 Le programme vous demandera alors quel mode de jeu vous souhaitez utiliser :
 
 - `n` pour le mode normal : vous devrez répondre à un nombre de questions prédéfini pour obtenir un score.
+    - changer le nombre de question dans `variable.py` dans la variable `DEPT_POUR_NORMALE` 
 - `m` pour le mode contre la montre : vous devrez répondre à un maximum de questions dans un temps imparti.
+    - changer le nombre de question dans `variable.py` dans la variable `DEPT_POUR_CONTRE_LA_MONTRE` 
 - `s` pour le mode sans erreur : vous devrez répondre à un maximum de questions sans faire d'erreur.
 - `r` pour connaître les différents records
 
