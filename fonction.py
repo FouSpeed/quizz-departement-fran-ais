@@ -33,17 +33,17 @@ def choix_dept(dep:list, nbr_qst: int)->list:
         #mélanger reponse_possible
         reponse_possible = random_list(reponse_possible) #ou faire random.shuffle(reponse_possible)
         #la bonne réponse sera le premier élément de reponse_possible
-        indice_dep_reponse = 0 
+        indice_dep_reponse = 0
 
         #choix des 3 département à mettre dans le dictionnaire
         while len(deps_pour_dict) != 3:
             dep_aleatoire = dep[random.randint(0,len(dep)-1)]
-            if dep_aleatoire not in dep_deja_select:
+            if dep_aleatoire not in dep_deja_select and len(deps_pour_dict) == indice_dep_reponse:   #ajout du département réponse
                 deps_pour_dict.append(dep_aleatoire)
                 #permettre à ce que le département soit posé en question qu'une seule fois
-                if len(deps_pour_dict) == indice_dep_reponse:
-                    dep_deja_select.append(dep_aleatoire)
-
+                dep_deja_select.append(dep_aleatoire)
+            elif len(deps_pour_dict) > indice_dep_reponse:
+                deps_pour_dict.append(dep_aleatoire)
         
         dep_dict = {
                 "dept": deps_pour_dict[indice_dep_reponse][0],

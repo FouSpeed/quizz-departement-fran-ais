@@ -57,7 +57,7 @@ elif mode_de_jeu == "m":
                 json.dump(record, f)
             
 elif mode_de_jeu == "s":
-    dept_selec = choix_dept(departement, 95)
+    dept_selec = choix_dept(departement, len(departement))
     print(f"Votre but est de répondre au plus grand nombre de questions possible\n record: {record_sans_erreur}")
     continuer = True
     bonne_reponse = 0
